@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Lemon Restaurant</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+      }
+      .api-section {
+        margin: 20px 0;
+        padding: 15px;
+        background-color: #ecf0f1;
+        border-radius: 5px;
+      }
+      .endpoint {
+        background-color: #3498db;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-family: monospace;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🍋 Little Lemon Restaurant API</h1>
+      <p>
+        Welcome to the Little Lemon Restaurant API! This API provides endpoints
+        for managing menu items and table bookings.
+      </p>
+
+      <div class="api-section">
+        <h2>API Endpoints</h2>
+        <h3>Authentication</h3>
+        <div class="endpoint">POST /api/registration/</div>
+        <div class="endpoint">POST /api/login/</div>
+
+        <h3>Menu Items</h3>
+        <div class="endpoint">GET /api/menu/</div>
+        <div class="endpoint">POST /api/menu/</div>
+        <div class="endpoint">GET /api/menu/{id}/</div>
+        <div class="endpoint">PUT /api/menu/{id}/</div>
+        <div class="endpoint">DELETE /api/menu/{id}/</div>
+
+        <h3>Table Bookings</h3>
+        <div class="endpoint">GET /api/bookings/</div>
+        <div class="endpoint">POST /api/bookings/</div>
+        <div class="endpoint">GET /api/bookings/{id}/</div>
+        <div class="endpoint">PUT /api/bookings/{id}/</div>
+        <div class="endpoint">DELETE /api/bookings/{id}/</div>
+      </div>
+
+      <div class="api-section">
+        <h2>Authentication</h2>
+        <p>
+          All endpoints (except registration and login) require authentication
+          using a token. Include the token in the Authorization header:
+        </p>
+        <code>Authorization: Token your_token_here</code>
+      </div>
+    </div>
+  </body>
+</html>
